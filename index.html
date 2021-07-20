@@ -1,0 +1,32 @@
+<script type="module">
+  import Lexer from "./Lexer.js";
+  import Parser from "./Parser.js";
+
+  var tokens = Lexer.Parse("2*2");
+  console.info(tokens);
+
+  var nodes = Parser.ToNodes(tokens);
+  console.info(nodes);
+
+  var ast = Parser.Parse(nodes);
+  console.info(ast);
+
+  var res = Parser.QuickParse(ast);
+  console.info(res);
+
+let inp = document.getElementById("inp");
+let out = document.getElementById("out");
+let submit = document.getElementById("submit");
+  submit.onclick = function submit() {
+    let val = inp.value;
+    out.innerText = "Result is: " + Parser.QuickParse(Parser.Parse(Parser.ToNodes(Lexer.Parse(val))));
+  }
+
+</script>
+
+<h1>Calculator v1.0.0</h1>
+
+<textarea id="inp" rows="10" cols="40"></textarea>
+<button id="submit" onclick="alert('An error has occured.');">Submit</button>
+<br>
+<p id="out">Waiting for output...</p>
