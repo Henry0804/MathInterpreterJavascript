@@ -4,8 +4,8 @@
 //package com.Math;
 
 //import java.util.ArrayList;
-import TokenType from "./TokenType.js";
-import Token from "./Token.js";
+import TokenType from "./TokenType.mjs";
+import Token from "./Token.mjs";
 
 class Lexer {
   static Ignored = [' '];

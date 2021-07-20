@@ -1,11 +1,11 @@
 //package com.Math;
 
-import * as node1 from "./Nodes/AssignNode.js";
-import * as node2 from "./Nodes/CommaNode.js";
-import * as node3 from "./Nodes/NumberNode.js";
-import * as node4 from "./Nodes/OperatorNode.js";
-import * as node5 from "./Nodes/ParenthesisNode.js";
-import * as node6 from "./Nodes/VariableNode.js";
+import * as node1 from "./Nodes/AssignNode.mjs";
+import * as node2 from "./Nodes/CommaNode.mjs";
+import * as node3 from "./Nodes/NumberNode.mjs";
+import * as node4 from "./Nodes/OperatorNode.mjs";
+import * as node5 from "./Nodes/ParenthesisNode.mjs";
+import * as node6 from "./Nodes/VariableNode.mjs";
 
 /*enum*/ class TokenType {
   static ValueList = ["Number","Operator","Parenthesis","Variable","Assign","Comma"];

@@ -3,15 +3,15 @@
 //import com.Math.Nodes.*;
 
 
-import TokenType from "./TokenType.js";
-import Token from "./Token.js";
+import TokenType from "./TokenType.mjs";
+import Token from "./Token.mjs";
 
-import AssignNode from "./Nodes/AssignNode.js";
-import CommaNode from "./Nodes/CommaNode.js";
-import NumberNode from "./Nodes/NumberNode.js";
-import OperatorNode from "./Nodes/OperatorNode.js";
-import ParenthesisNode from "./Nodes/ParenthesisNode.js";
-import VariableNode from "./Nodes/VariableNode.js";
+import AssignNode from "./Nodes/AssignNode.mjs";
+import CommaNode from "./Nodes/CommaNode.mjs";
+import NumberNode from "./Nodes/NumberNode.mjs";
+import OperatorNode from "./Nodes/OperatorNode.mjs";
+import ParenthesisNode from "./Nodes/ParenthesisNode.mjs";
+import VariableNode from "./Nodes/VariableNode.mjs";
 
 //import java.util.ArrayList;
 //import java.util.HashMap;

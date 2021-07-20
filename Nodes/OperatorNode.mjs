@@ -7,8 +7,8 @@
 //import java.util.ArrayList;
 //import java.util.HashMap;
 
-import Token from "../Token.js";
-import TokenType from "../TokenType.js";
+import Token from "../Token.mjs";
+import TokenType from "../TokenType.mjs";
 
 /*public*/ export default class OperatorNode /*implements Node*/ {
   /*public Token*/ OperationToken = new Token(TokenType.Get("Operator"), "_");
