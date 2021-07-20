@@ -163,9 +163,9 @@ import VariableNode from "./Nodes/VariableNode.js";
       /*TokenType*/ let type = n.GetToken().Type;
       /*String*/ let value = n.GetToken().Value;
       if (type.Value==TokenType.Get("Assign").Value&&(value=="=" )  ) {
-        /*Node*/ left = Nodes[i-1];
-        /*Node*/ right = Nodes[i+1];
-        /*AssignNode*/ out = new AssignNode(n.GetToken(),left,right);
+        /*Node*/ let left = Nodes[i-1];
+        /*Node*/ let right = Nodes[i+1];
+        /*AssignNode*/ let out = new AssignNode(n.GetToken(),left,right);
         Nodes[i] = out;
         Nodes.splice(i-1,1);
         Nodes.splice(i,1);

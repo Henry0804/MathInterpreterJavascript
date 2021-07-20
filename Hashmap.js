@@ -20,8 +20,9 @@ export default class Hashmap {
   remove(key) {
     let ret = -1;
     this.Key.forEach((item, i) => {
-      if (item==k) {ret = i;}
+      if (item==key) {ret = i;}
     });
+    if (key==-1) {return;}
     this.Key.splice(ret,1);
     this.Value.splice(ret,1);
   }

@@ -30,7 +30,7 @@
 
   /*public @Override
   float*/ QuickParse(/*HashMap<String, Float>*/ vars) {
-    /*float*/ val = this.RightNode.QuickParse(vars);
+    /*float*/ let val = this.RightNode.QuickParse(vars);
     vars.remove(this.LeftNode.GetToken().Value);
     vars.put(this.LeftNode.GetToken().Value, val);
     if (this.InvertOutput) {
