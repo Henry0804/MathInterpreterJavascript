@@ -28,7 +28,7 @@ export default /*public*/ class VariableNode /*implements Node*/ {
   /*public @Override
   float*/ QuickParse(/*HashMap<String, Float>*/ vars) {
     if (vars.get(this.OperationToken.Value) != null) {
-      /*float*/ val = vars.get(this.OperationToken.Value);
+      /*float*/ let val = vars.get(this.OperationToken.Value);
       if (this.InvertOutput) {
         val = -val;
       }

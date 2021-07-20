@@ -1,6 +1,7 @@
 <script type="module">
   import Lexer from "./Lexer.js";
   import Parser from "./Parser.js";
+  import Hashmap from "./Hashmap.js";
 
   var tokens = Lexer.Parse("2*2");
   console.info(tokens);
@@ -17,9 +18,13 @@
 let inp = document.getElementById("inp");
 let out = document.getElementById("out");
 let submit = document.getElementById("submit");
+let vars = new Hashmap();
+vars.put("pi",Math.PI);
+vars.put("infinity",1/0);
+vars.put("nan",0/0);
   submit.onclick = function submit() {
     let val = inp.value;
-    out.innerText = "Result is: " + Parser.QuickParse(Parser.Parse(Parser.ToNodes(Lexer.Parse(val))));
+    out.innerText = "Result is: " + Parser.QuickParse(Parser.Parse(Parser.ToNodes(Lexer.Parse(val))),vars);
   }
 
 </script>
