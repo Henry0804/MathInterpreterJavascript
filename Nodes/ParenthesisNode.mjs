@@ -42,9 +42,13 @@ export default /*public*/ class ParenthesisNode /*implements Node*/ {
 
     } else if (this.OperationToken.Value=="test") {
       f = 1;
-      for (/*Node*/ a in Args) {
-        f *= a.QuickParse(vars);
-      }
+      //for (/*Node*/ let a in Args) {
+      //  f *= a.QuickParse(vars);
+      //}
+      Args.forEach((item, i) => {
+        f *= item.QuickParse(vars);
+      });
+
 
     }
     //return Nodes.get(0).QuickParse(vars);
@@ -57,7 +61,7 @@ export default /*public*/ class ParenthesisNode /*implements Node*/ {
     Out = Out.concat(this.Nodes[0]);
     for (/*int*/ let i = 0;i < this.Nodes.length;i++) {
       /*Token*/ let t = this.Nodes[i].GetToken();
-      if (t.Value==",") {Out = Out.concat( Nodes[i+1] );}
+      if (t.Value==",") {Out = Out.concat( this.Nodes[i+1] );}
     }
     return Out;
   }

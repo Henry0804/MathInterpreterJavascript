@@ -84,14 +84,17 @@ import VariableNode from "./Nodes/VariableNode.mjs";
 
         depth --;
         if (depth==0) {
-          /*List<Node>*/ let split = Nodes.splice(start,i);
+          /*List<Node>*/ let split = Nodes.splice(start,i-start+1);
+          split.shift();
+          split.pop();
+          //console.info(split,Nodes);
           ///*ArrayList<Node>*/ let split2 = /*new ArrayList<Node>(*/split;
           //this.RemoveRange(Nodes,start,i);
           //Nodes.splice(start,i-start);
           i = start;
-          //invert = n.GetInvert();
-          split.shift();
-          split.pop();
+
+
+
 
 
           /*Node*/ let add = new ParenthesisNode(new Token(TokenType.Get("Parenthesis"),")"),split);
@@ -219,7 +222,7 @@ import VariableNode from "./Nodes/VariableNode.mjs";
         //Nodes.get(i + 1).GetToken().Value = "-" + Nodes.get(i + 1).GetToken().Value;
         if (i==0) {continue;}
         if (Nodes[i-1].GetToken().Type.Value!=TokenType.Get("Variable").Value) {continue;}
-        n.GetToken().Value = Nodes.get[i-1].GetToken().Value;
+        n.GetToken().Value = Nodes[i-1].GetToken().Value;
         Nodes.splice(i-1,1);
         i--;
       }

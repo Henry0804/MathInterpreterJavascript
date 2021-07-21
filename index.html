@@ -3,17 +3,7 @@
   import Parser from "./Parser.mjs";
   import Hashmap from "./Hashmap.mjs";
 
-  var tokens = Lexer.Parse("2*2");
-  console.info(tokens);
 
-  var nodes = Parser.ToNodes(tokens);
-  console.info(nodes);
-
-  var ast = Parser.Parse(nodes);
-  console.info(ast);
-
-  var res = Parser.QuickParse(ast);
-  console.info(res);
 
 let inp = document.getElementById("inp");
 let out = document.getElementById("out");
@@ -39,7 +29,7 @@ vars.put("nan",0/0);
 <br>
 <br>
 <p>
-Calculator version: 1.0.0<br>
+Calculator version: 1.0.1<br>
 Current features:<br>
 Supports these current operations: (+-*/%)<br>
 Also supports functions but I haven't really done much with that yet.<br>
